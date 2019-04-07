@@ -7,7 +7,7 @@ namespace PartyDemo.Controllers
     {
         public IActionResult Index()
         {
-            ViewBag.CurrentTime = DateTime.Now;
+            ViewBag.GreetingWord = DateTime.Now.Hour < 12 ? "Good morning" : "Good afternoon";
             return View("Index");
         }
     }
